@@ -1,0 +1,33 @@
+{{ $mapName := "hewin_560598" }}
+
+{{ $mapWidth := "100%" }}
+{{ $mapHeight := "300px" }}
+{{ $scaleControl := "true"  }}
+{{ $miniMap := "false" }}
+{{ $scrollWheelZoom := "true" }}
+{{ $zoomControl :=   "true" }}
+{{ $allowEdit := "false" }}
+{{ $moreControl := "true" }}
+{{ $searchControl := "true" }}
+{{ $tilelayersControl :="null" }}
+{{ $embedControl := "false" }}
+{{ $datalayersControl := "null" }}
+{{ $onLoadPanel := "none" }}
+{{ $captionBar := "false" }}
+{{ $fullscreenControl := default "null" }}
+{{ $scale := 15 }}
+{{ $lat := .Get "lat" | default 45.5576 }}
+{{ $lon := .Get "lon" | default -73.7242 }}
+{{ $place := .Get "place" | default "OpenStreetMap" }}
+
+<div class="block">
+    <div class="google-map">
+        <iframe width="{{ $mapWidth }}" height="{{ $mapHeight }}" frameBorder="0" src="https://umap.openstreetmap.fr/fr/map/{{- $mapName -}}?scaleControl={{ $scaleControl }}&miniMap={{ $miniMap }}&scrollWheelZoom={{ $scrollWheelZoom }}&zoomControl={{ $zoomControl }}&allowEdit={{ $allowEdit }}&moreControl={{ $moreControl }}&searchControl={{ $searchControl }}&tilelayersControl={{ $tilelayersControl }}&embedControl={{ $embedControl }}&datalayersControl={{ $datalayersControl }}&onLoadPanel={{ $onLoadPanel }}&captionBar={{ $captionBar }}&fullscreenControl={{ $fullscreenControl }}#{{ $scale }}/{{ $lat }}/{{ $lon }}"></iframe>
+    </div>
+</div>
+<div class="exifElement">
+    <a href="http://www.openstreetmap.org/?mlat={{ $lat }}&mlon={{ $lon }}&zoom=16&layers=M">
+        <i class="fa fa-map-marked"></i>
+        {{ $place }}
+    </a>
+</div>

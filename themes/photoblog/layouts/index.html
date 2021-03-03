@@ -1,0 +1,14 @@
+{{ define "main" }}
+    <main role="main">
+        {{ range .Site.RegularPages }}
+            {{ if not .Params.page }}
+                {{ partial "metadata.html" . }}
+                <a href="{{ .RelPermalink }}" aria-label="{{ .Title }}">
+                    <article>
+                        <p>{{ .Content }}</p>
+                    </article> 
+                </a>
+            {{ end }}
+        {{ end }}
+    </main>
+{{ end }}

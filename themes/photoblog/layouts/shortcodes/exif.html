@@ -1,0 +1,65 @@
+{{ $src := .Page.Resources.GetMatch (.Get "src") }}
+{{- $noExif := .Get "noExif" -}}
+
+{{ with $src.Exif }}
+
+<div class="text-center">
+        {{ with .Tags.Model}} {{ . }}{{ end }}
+        {{ with .Tags.LensModel }}{{ . }}{{ end }}
+        {{ with .Tags.FocalLength }}{{ . }}mm{{ end }}
+        {{ with .Tags.FNumber }}ƒ/{{ . }}{{ end }}
+        {{ with .Tags.ExposureTime }}{{ . }}{{ end }}
+        {{ with .Tags.ISOSpeedRatings }}ISO {{ . }}{{ end }}  
+ 
+</div>     
+
+  {{ if and .Tags.GPSLatitude .Tags.GPSLongitude }}
+    {{ $latSign := 1 }}
+        {{ if eq .Tags.GPSLatitudeRef "S" }}
+            {{ $latSign = -1 }}
+        {{ end }}
+    {{ $lonSign := 1 }}
+    {{ if eq .Tags.GPSLongitudeRef "W" }}
+        {{ $lonSign = -1 }}
+    {{ end }}
+    {{ $lat := mul $latSign (add (index .Tags.GPSLatitude 0) (add (div (index .Tags.GPSLatitude 1) 60) (div (index .Tags.GPSLatitude 2) 3600))) }}
+    {{ $lon := mul $lonSign (add (index .Tags.GPSLongitude 0) (add (div (index .Tags.GPSLongitude 1) 60) (div (index .Tags.GPSLongitude 2) 3600))) }}
+
+
+    {{ $mapName := "hewin_560598" }}
+
+    {{ $mapWidth := "100%" }}
+    {{ $mapHeight := "300px" }}
+
+    {{ $scaleControl := "true"  }}
+    {{ $miniMap := "false" }}
+    {{ $scrollWheelZoom := "true" }}
+    {{ $zoomControl :=   "true" }}
+    {{ $allowEdit := "false" }}
+    {{ $moreControl := "true" }}
+    {{ $searchControl := "true" }}
+    {{ $tilelayersControl :="null" }}
+    {{ $embedControl := "false" }}
+    {{ $datalayersControl := "null" }}
+    {{ $onLoadPanel := "none" }}
+    {{ $captionBar := "false" }}
+    {{ $fullscreenControl := default "null" }}
+
+    {{ $scale := 15 }}
+
+    <div class="block">
+        <div class="google-map">
+            <iframe width="{{ $mapWidth }}" height="{{ $mapHeight }}" frameBorder="0" src="https://umap.openstreetmap.fr/fr/map/{{- $mapName -}}?scaleControl={{ $scaleControl }}&miniMap={{ $miniMap }}&scrollWheelZoom={{ $scrollWheelZoom }}&zoomControl={{ $zoomControl }}&allowEdit={{ $allowEdit }}&moreControl={{ $moreControl }}&searchControl={{ $searchControl }}&tilelayersControl={{ $tilelayersControl }}&embedControl={{ $embedControl }}&datalayersControl={{ $datalayersControl }}&onLoadPanel={{ $onLoadPanel }}&captionBar={{ $captionBar }}&fullscreenControl={{ $fullscreenControl }}#{{ $scale }}/{{ $lat }}/{{ $lon }}"></iframe>
+        </div>
+    </div>
+
+    <div class="exifElement">
+        <a href="http://www.openstreetmap.org/?mlat={{ $lat }}&mlon={{ $lon }}&zoom=16&layers=M">
+            <i class="fa fa-map-marked"></i>
+            OpenStreetMap
+        </a>
+    </div>
+
+{{ end }}
+
+{{ end }}

@@ -1,0 +1,27 @@
+<header>
+    <h1><a href="{{ .Site.Home.RelPermalink }}" class="text-center">
+        
+            {{ if isset .Site.Params "logo" }}
+            <img class="circle-logo" src="{{ .Site.Params.Logo }}" alt="logo">
+            {{ end }}
+            {{ .Site.Title }}
+        
+    </a></h1>
+
+    <nav>
+        <ul>
+            {{ with .Site.Social.twitter }}
+                <li><a href="https://twitter.com/{{ . }}">twitter</a></li>
+            {{ end }}
+            {{ with .Site.Social.youtube }}
+                <li><a href="https://youtube.com/{{ . }}">youtube</a></li>
+            {{ end }}
+            {{ range .Site.RegularPages }}
+                {{ if .Params.page }}
+                    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                {{ end }}
+            {{ end }}
+
+        </ul>
+        </nav>
+</header>

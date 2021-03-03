@@ -1,0 +1,22 @@
+baseURL = "https://diiorio.me/"
+languageCode = "en-us"
+title = "Anthony Di Iorio"
+theme = "photoblog"
+
+[params]
+    author = "Anthony Di Iorio"
+    title = "Anthony Di Iorio"
+    description = "Anthony Di Iorio Photoblog. Montreal, Canada"
+    logo = "anthony.jpg"
+    images = ["twitter.jpg"]
+
+[social]
+    twitter = "ve2hew"
+    youtube = "thetechzonelive"
+
+[imaging]
+# See https://github.com/disintegration/imaging
+resampleFilter = "lanczos"
+
+[imaging.exif]
+    includeFields = ".*"
