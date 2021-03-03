@@ -7,6 +7,7 @@ theme = "photoblog"
     author = "Anthony Di Iorio"
     title = "Anthony Di Iorio"
     description = "Anthony Di Iorio Photoblog. Montreal, Canada"
+    # Images go in /static
     logo = "anthony.jpg"
     images = ["twitter.jpg"]
 

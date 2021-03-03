@@ -2,7 +2,7 @@
     <h1><a href="{{ .Site.Home.RelPermalink }}" class="text-center">
         
             {{ if isset .Site.Params "logo" }}
-            <img class="circle-logo" src="{{ .Site.Params.Logo }}" alt="logo">
+            <img class="circle-logo" src="{{ .Site.Home.RelPermalink }}{{ .Site.Params.Logo }}" alt="logo">
             {{ end }}
             {{ .Site.Title }}
         
