@@ -5,7 +5,7 @@ My personal photo blog
 ## Shortcodes
 
 ### img
-Photos go in the /assets/ folder for processing. 
+Photos go in the /posts/post-name/ folder for processing. 
 
 `{{< img src="images/2021/02/example.jpg" alt="Example" >}}`
 
@@ -34,6 +34,7 @@ theme = "photoblog"
     title = "Anthony Di Iorio"
     description = "Photo blog"
     logo = "/logo.jpg"
+    images = ["twitter.jpg"]
 
 [social]
     twitter = "ve2hew"
