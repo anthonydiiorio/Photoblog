@@ -4,7 +4,7 @@ My personal photo blog
 
 ## Hugo
 
-Local Server:
+Local Server with drafts:
 
 `hugo server -D`
 
