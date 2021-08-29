@@ -2,6 +2,16 @@
 
 My personal photo blog
 
+## Hugo
+
+Local Server:
+
+`hugo server -D`
+
+Build:
+
+`hugo`
+
 ## Shortcodes
 
 ### img
