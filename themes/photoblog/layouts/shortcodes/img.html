@@ -29,7 +29,7 @@
   {{ if ge $src.Width "800" }}
     {{ with $native.RelPermalink }}{{.}} 1x{{ end }}
   {{ end }}
-  {{ if ge $src.Width "2000" }}
+  {{ if ge $src.Width "1920" }}
     {{ with $retina.RelPermalink }}, {{.}} 2x{{ end }}
   {{ end }}'
   {{ if $native }}
