@@ -5,6 +5,6 @@ draft: false
 page: true
 ---
 
-Email: [anthony@diiorio.me](mailto:anthony@diiorio.me?Subject=Hello)
+Email: [anthony@diiorio.me](mailto:anthony@diiorio.me)
 
 Twitter: [@VE2HEW](https://twitter.com/VE2HEW)
