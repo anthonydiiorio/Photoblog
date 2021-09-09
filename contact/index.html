@@ -3,8 +3,7 @@
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta name=description content="Anthony Di Iorio Photoblog. Montreal, Canada">
 <meta property="og:title" content="Contact">
-<meta property="og:description" content="Email: anthony@diiorio.me
-Twitter: @VE2HEW">
+<meta property="og:description" content=" Full Name Email Address Message    ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://diiorio.me/contact/"><meta property="og:image" content="https://diiorio.me/twitter.jpg"><meta property="article:section" content>
 <meta property="article:published_time" content="2021-02-08T19:44:33-05:00">
@@ -12,11 +11,10 @@ Twitter: @VE2HEW">
 <meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://diiorio.me/twitter.jpg">
 <meta name=twitter:title content="Contact">
-<meta name=twitter:description content="Email: anthony@diiorio.me
-Twitter: @VE2HEW">
+<meta name=twitter:description content=" Full Name Email Address Message    ">
 <meta name=twitter:site content="@ve2hew">
 <link href=https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl crossorigin=anonymous>
-<link rel=stylesheet href=/sass/main.min.5df73fdba209f0d89d6ebc6936a0fe9fbb36796e910d529aa8749286ac7c1b02.css>
+<link rel=stylesheet href=/sass/main.min.07e2c0dba28ec0775e01882eb3355dcb030c3fdda9fbef5257736c390fbe505f.css>
 <title>Anthony Di Iorio | Contact</title>
 </head><body>
 <div class=container><header>
@@ -38,8 +36,19 @@ Anthony Di Iorio
 <h3><a class=title href=/contact/>Contact</a></h3>
 </div>
 <article>
-<p><p>Email: <a href=mailto:anthony@diiorio.me>anthony@diiorio.me</a></p>
-<p>Twitter: <a href=https://twitter.com/VE2HEW>@VE2HEW</a></p>
+<p>
+<form id=fs-frm name=simple-contact-form accept-charset=utf-8 action=https://formspree.io/f/mqkwwoog method=post>
+<fieldset id=fs-frm-inputs>
+<label for=full-name>Full Name</label>
+<input type=text name=name id=full-name placeholder="First and Last" required>
+<label for=email-address>Email Address</label>
+<input type=email name=_replyto id=email-address placeholder=email@domain.tld required>
+<label for=message>Message</label>
+<textarea rows=5 name=message id=message placeholder required></textarea>
+<input type=hidden name=_subject id=email-subject value="Contact Form Submission">
+</fieldset>
+<input type=submit value=Submit>
+</form>
 </p>
 </article>
 </main>
