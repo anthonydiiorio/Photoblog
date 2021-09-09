@@ -22,6 +22,7 @@ $background-color: #121212;
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
+$input-box:        #222222;
 
 $paginate: #f1f1f1;
 
@@ -173,4 +174,35 @@ header{
     @media screen and (min-width: 0px) and (max-width: 770px) {
         width: 50px;
        }
+}
+
+/**
+* Forms
+*/
+
+input, textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    background-color: $input-box;
+    color: $text-color;
+    border: 1px solid $grey-color-dark;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: $text-color;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
 }
