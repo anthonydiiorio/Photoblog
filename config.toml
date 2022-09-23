@@ -13,6 +13,7 @@ theme = "photoblog"
     images = ["twitter.jpg"]
 
 [social]
+    blog = "https://diiorio.me/"
     twitter = "ve2hew"
     youtube = "thetechzonelive"
 

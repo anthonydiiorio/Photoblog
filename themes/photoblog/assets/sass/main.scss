@@ -146,7 +146,7 @@ header{
     }
 
     nav{
-        text-transform: lowercase;
+        //text-transform: lowercase;
         //color: lighten(@dark-grey, 30%);
 
         a:link, a:visited{
@@ -163,7 +163,7 @@ header{
  * Images
  */
  img {
-    max-width: 100%;
+    width: 100%;
 }
 
 .circle-logo {

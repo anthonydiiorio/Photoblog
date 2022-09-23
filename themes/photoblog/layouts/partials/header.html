@@ -10,11 +10,14 @@
 
     <nav>
         <ul>
+            {{ with .Site.Social.blog }}
+                <li><a href="{{ . }}">Blog</a></li>
+            {{ end }}
             {{ with .Site.Social.twitter }}
-                <li><a href="https://twitter.com/{{ . }}">twitter</a></li>
+                <li><a href="https://twitter.com/{{ . }}">Twitter</a></li>
             {{ end }}
             {{ with .Site.Social.youtube }}
-                <li><a href="https://youtube.com/{{ . }}">youtube</a></li>
+                <li><a href="https://youtube.com/{{ . }}">YouTube</a></li>
             {{ end }}
             {{ range .Site.RegularPages }}
                 {{ if .Params.page }}
