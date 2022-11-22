@@ -1,7 +1,7 @@
 {{ define "main" }}
     <main role="main">
-        {{ range .Site.RegularPages }}
-            {{ if not .Params.page }}
+        {{ range .Paginator.Pages }}
+           {{ if not .Params.page }}
                 {{ partial "metadata.html" . }}
                 <a href="{{ .RelPermalink }}" aria-label="{{ .Title }}">
                     <article>
@@ -10,5 +10,6 @@
                 </a>
             {{ end }}
         {{ end }}
+        {{ template "_internal/pagination.html" . }}
     </main>
 {{ end }}
